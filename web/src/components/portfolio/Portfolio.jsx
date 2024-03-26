@@ -5,27 +5,27 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    title: "React Commerce",
+    title: "Iut EduMate",
     img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    desc: "iut_edumate is a web platform developed for a university where students can post questions about different topic courses and others can post answers to those questions. It provides a platform for students to collaborate and share resources, ask questions, and find answers.",
   },
   {
     id: 2,
-    title: "Next.js Blog",
+    title: "Teach Me",
     img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    desc: "The Teach Me project is a learning platform designed for children. The platform includes interactive games and activities to help children learn a variety of subjects. The site also includes progress reports for parents to track their child's learning..",
   },
   {
     id: 3,
-    title: "Vanilla JS App",
+    title: "Sign Languge Detection",
     img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    desc: "The Sign Language Detection project is an image processing and object detection application developed in Python to detect and recognize hand gestures in still images and real-time videos captured through the webcam. The project employs the MobileNet SSD architecture, TensorFlow, and OpenCV for image processing and detection tasks.",
   },
   {
     id: 4,
-    title: "Music App",
+    title: "Blogs Aggregator",
     img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    desc: "This is a simple backend project based on goLang. It is rss blog aggregator. That monitors registered blogs and fetched new blogs from them. Users can follow blogs and the blogs will be fetched from them. The server auto updates fetched blogs.",
   },
 ];
 
@@ -72,7 +72,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
-        <h1>Featured Works</h1>
+        <h1>Projects</h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
       {items.map((item) => (

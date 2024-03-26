@@ -1,5 +1,7 @@
 import "./hero.scss";
-import { motion } from "framer-motion";
+import { motion ,useAnimation } from "framer-motion";
+import { useState, useEffect } from "react";
+import ShuffleText from "./ShuffleText";
 
 const textVariants = {
   initial: {
@@ -38,6 +40,38 @@ const sliderVariants = {
 };
 
 const Hero = () => {
+
+  const [textIndex, setTextIndex] = useState(0);
+  const texts = ["ML Enthusiast", "NLP Enthusiast", "Web Developer", "Backend Engineer"];
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+      controls.start({
+        opacity: 0,
+        x: -10,
+        transition: { duration: 0.2 },
+      });
+      setTimeout(() => {
+        controls.start({
+          opacity: 1,
+          x: 0,
+          transition: { duration: 0.2 },
+        });
+      }, 100);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [controls, texts.length]);
+
+
+
+
+
+
+
+
   return (
     <div className="hero">
       <div className="wrapper">
@@ -47,9 +81,20 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>HARVEY TYLER</motion.h2>
+          <motion.h2 variants={textVariants}>Talimul Bari Shreshtho</motion.h2>
           <motion.h1 variants={textVariants}>
-            Web developer and UI designer
+            Software Engineer and{" "}
+        <motion.span
+          animate={controls}
+          style={{
+        display: "inline-block",
+        overflow: "hidden",
+        color: "rebeccapurple", // Set the color to red
+        whiteSpace: "nowrap", // Ensure the text stays in the same line
+      }}
+        >
+          {texts[textIndex]}
+        </motion.span>
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
@@ -71,13 +116,15 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Writer Content Creator Influencer
+      Software IUT GO Backend Engineer Web Machine Learning NLP
       </motion.div>
-      <div className="imageContainer">
+      {/* <div className="imageContainer">
         <img src="/hero.png" alt="" />
-      </div>
+      </div> */}
     </div>
   );
 };
 
 export default Hero;
+
+

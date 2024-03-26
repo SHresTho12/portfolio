@@ -1,0 +1,70 @@
+@import "../../app.scss";
+$h1-font-size-min: 3rem;
+$h1-font-size-max: 10vw;
+$h1-font-size-mobile: 10rem;
+$h1-padding-min: 1rem;
+$h1-padding-max: 2vw;
+$h1-padding-mobile: 3rem;
+$h1-border-radius-min: 0.4rem;
+$h1-border-radius-max: 0.75vw;
+$h1-border-radius-mobile: 1rem;
+
+$h1-hover-bg-color: white;
+$h1-hover-color: black;
+
+$meta-link-bg-color: rgba(255, 255, 255, 0.05);
+$meta-link-border-color: rgba(255, 255, 255, 0.1);
+$meta-link-hover-bg-color: rgba(255, 255, 255, 0.1);
+$meta-link-hover-border-color: rgba(255, 255, 255, 0.2);
+
+$h1-font-size: clamp($h1-font-size-min, $h1-font-size-max, $h1-font-size-mobile);
+$h1-padding: 0rem clamp($h1-padding-min, $h1-padding-max, $h1-padding-mobile);
+$h1-border-radius: clamp($h1-border-radius-min, $h1-border-radius-max, $h1-border-radius-mobile);
+
+.meta-link {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: $meta-link-bg-color;
+  border: 1px solid $meta-link-border-color;
+  border-radius: 6px;
+  bottom: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: inline-flex;
+  gap: 5px;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
+  text-decoration: none;
+  transition: background-color 400ms, border-color 400ms;
+  z-index: 10000;
+
+  &:hover {
+    background-color: $meta-link-hover-bg-color;
+    border: 1px solid $meta-link-hover-border-color;
+  }
+
+  > i, > span {
+    height: 20px;
+    line-height: 20px;
+  }
+
+  > span {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+  }
+}
+
+h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: $h1-font-size;
+  color: white;
+  padding: $h1-padding;
+  border-radius: $h1-border-radius;
+
+  &:hover {
+    background-color: $h1-hover-bg-color;
+    color: $h1-hover-color;
+  }
+}

@@ -13,7 +13,7 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Lama Dev
+          Talimul Bari Shreshtho
         </motion.span>
         <div className="social">
           <a href="#">
@@ -22,11 +22,11 @@ const Navbar = () => {
           <a href="#">
             <img src="/instagram.png" alt="" />
           </a>
-          <a href="#">
-            <img src="/youtube.png" alt="" />
+          <a href="https://www.linkedin.com/in/talimul-bari-shreshtho-50b8a7234/">
+            <img src="/lnkin.png" alt="" />
           </a>
-          <a href="#">
-            <img src="/dribbble.png" alt="" />
+          <a href="https://github.com/SHresTho12">
+            <img src="/git.png" alt="" />
           </a>
         </div>
       </div>
