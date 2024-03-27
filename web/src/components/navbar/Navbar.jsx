@@ -15,6 +15,14 @@ const Navbar = () => {
         >
           Talimul Bari Shreshtho
         </motion.span>
+        <div className="buttons">
+          <a href="/docs/CV.pdf" download>
+            <button className="cv-download">Download CV</button>
+          </a>
+          <a href="/docs/CV.pdf" target="_blank" rel="noopener noreferrer">
+            <button className="online-cv">View Online CV</button>
+          </a>
+        </div>
         <div className="social">
           <a href="#">
             <img src="/facebook.png" alt="" />

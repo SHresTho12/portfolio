@@ -34,4 +34,27 @@
       }
     }
   }
+.cv-download,
+.online-cv {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  color: #ffffff; /* White text color for contrast */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.cv-download:hover,
+.online-cv:hover {
+  background: linear-gradient(180deg, #111132, #0c0c1d); /* Darker gradient on hover */
+  transform: translateY(-2px); /* Move button 2px up on hover */
+}
+
+.cv-download:active,
+.online-cv:active {
+  transform: translateY(1px); /* Move button 1px down on click */
+}
 }

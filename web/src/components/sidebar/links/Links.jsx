@@ -25,13 +25,13 @@ const itemVariants = {
 };
 
 const Links = () => {
-  const items = ["Homepage", "Services", "Portfolio", "Contact", "About"];
+  const items = ["Homepage","Education " ,"Experience", "Services", "Projects", "Contact", "About"];
 
   return (
     <motion.div className="links" variants={variants}>
       {items.map((item) => (
         <motion.a
-          href={`#${item}`}
+           href={item === "Education" || item === "Experience" ? "#personalInfo" : `#${item}`}
           key={item}
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}

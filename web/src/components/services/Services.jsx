@@ -36,9 +36,8 @@ const Services = () => {
     >
       <motion.div className="textContainer" variants={variants}>
       <p>
-  Welcome to my portfolio! As a skilled software engineer,
-  <br /> I specialize in crafting innovative solutions
-  <br /> that propel businesses forward with cutting-edge technology.
+ As a skilled software engineer, I try to provide solutions to 
+
 </p>
         <hr />
       </motion.div>
