@@ -1,5 +1,6 @@
 
 import "./app.scss";
+import Personal from "./components/PersonalInfo/Personal";
 import Contact from "./components/contact/Contact";
 import Cursor from "./components/cursor/Cursor";
 import Hero from "./components/hero/Hero";
@@ -17,7 +18,7 @@ const App = () => {
         <Hero />
       </section>
          <section id="personalInfo">
-        
+          <Personal />
       </section>
 
       <section id="Services">

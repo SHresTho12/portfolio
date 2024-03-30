@@ -1,28 +1,43 @@
 import Sidebar from "../sidebar/Sidebar";
 import "./navbar.scss";
 import { motion } from "framer-motion";
-
+import React, { useState, useEffect } from 'react';
 const Navbar = () => {
+
+  const [downloadButtonText, setDownloadButtonText] = useState('Download CV');
+
+  // Function to detect if the device is a mobile device
+  const isMobileDevice = () => {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  };
+
+  useEffect(() => {
+    if (isMobileDevice()) {
+      setDownloadButtonText('CV');
+    } else {
+      setDownloadButtonText('Download CV');
+    }
+  }, []);
+
+
   return (
     <div className="navbar">
       {/* Sidebar */}
       <Sidebar/>
       <div className="wrapper">
-        <motion.span
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          Talimul Bari Shreshtho
-        </motion.span>
-        <div className="buttons">
-          <a href="/docs/CV.pdf" download>
-            <button className="cv-download">Download CV</button>
-          </a>
-          <a href="/docs/CV.pdf" target="_blank" rel="noopener noreferrer">
-            <button className="online-cv">View Online CV</button>
-          </a>
-        </div>
+
+   <div className="buttons">
+      {/* Render the download button with dynamic text */}
+      <a href="/docs/CV.pdf" download>
+        <button className="cv-download">{downloadButtonText}</button>
+      </a>
+      {/* Render online view button only for non-mobile screens */}
+      {!isMobileDevice() && (
+        <a href="/docs/CV.pdf" target="_blank" rel="noopener noreferrer" className="desktop-only">
+          <button className="online-cv">View Online CV</button>
+        </a>
+      )}
+    </div>
         <div className="social">
           <a href="#">
             <img src="/facebook.png" alt="" />

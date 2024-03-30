@@ -1,0 +1,44 @@
+.personal {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; // Align items to the top of the container
+    gap: 20px; // Adjust the gap between columns as needed
+
+    .left-column {
+      flex: 1; // Take up 1/3 of the container width
+    }
+
+    .right-column {
+      flex: 2; // Take up 2/3 of the container width
+      display: flex;
+      flex-direction: column;
+      gap: 20px; // Adjust the gap between cards in the right column as needed
+    }
+  }
+}
+
+// Media queries for responsiveness
+@media screen and (max-width: 768px) {
+  .personal {
+    flex-direction: column;
+  }
+
+  .left-column {
+    flex: 1;
+    order: 2;
+  }
+
+  .right-column {
+    flex: 1.5;
+    order: 1;
+  }
+}
