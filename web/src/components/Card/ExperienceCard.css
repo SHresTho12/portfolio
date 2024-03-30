@@ -1,56 +1,66 @@
 .experience-card {
-    background-color: #fff;
-    padding: 3rem 5rem;
-    margin-top: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #3b3b4b, #141430);
+    /* Update background color */
+    border-radius: 20px;
+    /* Add border radius for rounded corners */
+    padding: 20px;
+    /* Add padding */
+    color: #fff;
+    /* Set text color */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
     cursor: pointer;
-}
-
-.experience-card h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-.experience-card .expand {
-    width: 35rem;
-}
-
-.experience-card .experience-info {
-    padding-top: 1rem;
-    line-height: 150%;
+    /* Set cursor to pointer on hover */
 }
 
 .experience-card.expanded {
     height: auto;
-    padding-bottom: 3rem;
-    overflow: hidden;
+    /* Set height to auto when expanded */
 }
-.experience-card {
-    background-color: #fff;
-    padding: 3rem 5rem;
-    margin-top: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+
+.experience-card.expanded .expand {
+    margin-top: 20px;
+    /* Add margin to top of expanded content */
 }
 
 .experience-card h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    color: #fff;
+    /* Set heading color */
+    margin-bottom: 10px;
+    /* Add margin below heading */
 }
 
-.experience-card .expand {
-    width: 35rem;
+.experience-info {
+    margin-bottom: 20px;
+    /* Add margin below each info block */
 }
 
-.experience-card .experience-info {
-    padding-top: 1rem;
-    line-height: 150%;
+.experience-info p {
+    margin: 5px 0;
+    /* Add margin to each paragraph */
 }
 
-.experience-card.expanded {
-    height: auto;
-    padding-bottom: 3rem;
-    overflow: hidden;
+/* Hover effect */
+.experience-card:hover {
+    transform: translateY(-5px);
+    /* Move the card up on hover */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
+}
+
+@media screen and (max-width: 768px) {
+    .experience-card {
+        padding: 1.5rem;
+        /* Adjust padding for smaller screens */
+        margin: 0.5rem;
+        width: calc(50% - 20px);
+        /* Adjust margin for smaller screens */
+    }
+
+    .experience-card p {
+        font-size: 0.9rem;
+        /* Adjust font size */
+        line-height: 1.5;
+        /* Adjust line height */
+    }
 }

@@ -18,6 +18,7 @@ const ExperienceCard = () => {
 
   return (
     <motion.div
+      whileHover={{ scale: 1.2 }}
       transition={{ layout: { duration: 0.5, type: "spring" } }}
       layout
       onClick={() => setIsExpanded(!isExpanded)}

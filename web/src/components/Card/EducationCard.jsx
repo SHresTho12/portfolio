@@ -1,17 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Overlay from "./Overlay";
+import "./EducationCard.css";
 
-export const EducationCard = () => {
+const EducationCard = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const openModal = () => {
-    setIsExpanded(true);
-  };
-
-  const closeModal = () => {
-    setIsExpanded(false);
-  };
   const educationalInfo = [
     {
       institution: "Islamic University of Technology",
@@ -30,80 +23,62 @@ export const EducationCard = () => {
     // Add more educational information here if needed
   ];
 
-  const collapsedEducationalInfo = educationalInfo.slice(0, 2);
-
-  const expandedEducationalInfo = [
-    ...educationalInfo,
-    {
-      institution: "Bogura Cantonment School And College",
-      degree: "Secondary Scholl Certificate",
-      location: "Rajshahi Board",
-      date: "Science",
-      result: "GPA 5.00",
-    },
-  ];
-
   return (
-    <div className="container">
-      <motion.div
-        transition={{ layout: { duration: 0.5, type: "spring" } }}
-        layout
-        onClick={() => setIsExpanded(!isExpanded)}
-        className={`card ${isExpanded ? "expanded" : "collapsed"}`}
-      >
-        <motion.h2 layout="position">EDUCATION</motion.h2>
+    <motion.div
+      transition={{ layout: { duration: 0.5, type: "spring" } }}
+      layout
+      whileHover={{ scale: 1.2 }}
+      onClick={() => setIsExpanded(!isExpanded)}
+      className={`education-card ${isExpanded ? "expanded" : "collapsed"}`}
+    >
+      <motion.h2 layout="position">Education</motion.h2>
 
-        {!isExpanded && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            exit={{ opacity: 0 }}
-            className="expand"
-          >
-            {collapsedEducationalInfo.map((info, index) => (
-              <div key={index}>
-                <p>
-                  <strong>{info.institution}</strong>
-                </p>
-                <p>
-                  {info.location}, {info.date}
-                </p>
-                <p>{info.degree}</p>
-                <p>{info.result}</p>
-              </div>
-            ))}
-          </motion.div>
-        )}
+      {!isExpanded && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          exit={{ opacity: 0 }}
+          className="expand"
+        >
+          {educationalInfo.slice(0, 2).map((info, index) => (
+            <div key={index} className="education-info">
+              <p>
+                <strong>{info.institution}</strong>
+              </p>
+              <p>
+                {info.location}, {info.date}
+              </p>
+              <p>{info.degree}</p>
+              <p>{info.result}</p>
+            </div>
+          ))}
+        </motion.div>
+      )}
 
-        {isExpanded && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            exit={{ opacity: 0 }}
-            className="expand"
-          >
-            {expandedEducationalInfo.map((info, index) => (
-              <div key={index}>
-                <p>
-                  <strong>{info.institution}</strong>
-                </p>
-                <p>
-                  {info.location}, {info.date}
-                </p>
-                <p>{info.degree}</p>
-                <p>{info.result}</p>
-              </div>
-            ))}
-          </motion.div>
-        )}
-
-        {/* <Overlay close={closeModal}>
-          
-        </Overlay> */}
-      </motion.div>
-    </div>
+      {isExpanded && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          exit={{ opacity: 0 }}
+          className="expand"
+        >
+          {educationalInfo.map((info, index) => (
+            <div key={index} className="education-info">
+              <p>
+                <strong>{info.institution}</strong>
+              </p>
+              <p>
+                {info.location}, {info.date}
+              </p>
+              <p>{info.degree}</p>
+              <p>{info.result}</p>
+            </div>
+          ))}
+        </motion.div>
+      )}
+    </motion.div>
   );
 };
 

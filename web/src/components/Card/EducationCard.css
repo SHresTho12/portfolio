@@ -1,54 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-
-
 .education-card-container {
     position: relative;
+    margin: 10em auto;
 }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.card {
-    background-color: #fff;
-    padding: 3rem 5rem;
+.education-card {
+   
+ 
     margin-top: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+    margin-bottom: 2rem;
+background: linear-gradient(180deg, #3b3b4b, #141430);
+        /* Update background color */
+        border-radius: 20px;
+        /* Add border radius for rounded corners */
+        padding: 20px;
+        /* Add padding */
+        color: #fff;
+        /* Set text color */
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        /* Add box shadow */
+        cursor: pointer;
+        /* Set cursor to pointer on hover */
 }
 
-.card h2 {
+.education-card h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
-.card .expand {
+.education-card .expand {
     width: 35rem;
 }
 
-.card .expand p {
+.education-card .expand p {
     padding-top: 1rem;
     line-height: 150%;
 }
 
-.card.expanded {
+.education-card.expanded {
     height: auto;
     padding-bottom: 3rem;
     overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {
-    .card {
+    .education-card {
         padding: 1.5rem;
-        /* Adjust padding for smaller screens */
         margin: 0.5rem;
-        /* Adjust margin for smaller screens */
+        width: calc(50% - 20px);
     }
+         .education-card p {
+             font-size: 0.9rem;
+             /* Adjust font size */
+             line-height: 1.5;
+             /* Adjust line height */
+         }
 }

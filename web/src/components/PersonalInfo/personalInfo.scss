@@ -1,3 +1,14 @@
+@import "../../app.scss";
+
+.personal-container{
+  //make the h1 centered
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  h1{
+    text-align: center;
+  }
+
+
+}
 .personal {
   height: 100vh;
   overflow: hidden;
@@ -9,36 +20,36 @@
 
   .card-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start; // Align items to the top of the container
+    flex-direction: column; // Change to column layout
+    align-items: center; // Center align items in column layout
     gap: 20px; // Adjust the gap between columns as needed
 
     .left-column {
-      flex: 1; // Take up 1/3 of the container width
+      width: 100%; // Ensure the left column takes full width
     }
 
     .right-column {
-      flex: 2; // Take up 2/3 of the container width
-      display: flex;
-      flex-direction: column;
-      gap: 20px; // Adjust the gap between cards in the right column as needed
+      width: 100%; // Ensure the right column takes full width
     }
   }
+
 }
 
+    .slidingTextContainer {
+    position: absolute;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
+  }
+
 // Media queries for responsiveness
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   .personal {
-    flex-direction: column;
-  }
-
-  .left-column {
-    flex: 1;
-    order: 2;
-  }
-
-  .right-column {
-    flex: 1.5;
-    order: 1;
+    .card-container {
+      flex-direction: row; // Change back to row layout for larger screens
+    }
   }
 }
