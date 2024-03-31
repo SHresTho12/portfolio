@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const AboutCard = () => {
   // Sample data for the about card
   const aboutData = {
-    name: "John Doe",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at odio nec leo elementum congue.",
+    name: "Talimul Bari Shreshtho",
+    bio: "I am a full-stack developer with a passion for backend development. I am always eager to learn new technologies and improve my skills.",
     skills: ["React", "JavaScript", "HTML", "CSS", "Node.js"],
   };
 

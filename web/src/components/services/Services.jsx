@@ -35,22 +35,22 @@ const Services = () => {
       animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
-     {/*  <p>
+        {/*  <p>
  As a skilled software engineer I have a good understanding of web development, backend development, and machine learning. I am always ready to learn new things.
 
 </p> */}
-        
-      </motion.div> 
+      </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
-            <motion.b whileHover={{color:"orange"}}>Skills</motion.b> Services
+            <motion.b whileHover={{ color: "orange" }}>Skills</motion.b>{" "}
+            Services
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{color:"orange"}}>I Provide</motion.b>
+            <motion.b whileHover={{ color: "orange" }}>I Provide</motion.b>
           </h1>
           <button>WHAT I DO?</button>
         </div>
@@ -62,10 +62,13 @@ const Services = () => {
         >
           <h2>Web Development</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            As a web developer, I have extensive experience in building modern
+            and responsive web applications. My expertise lies in utilizing
+            technologies such as React, Sass, Chakra UI, and JavaScript to
+            create dynamic and user-friendly interfaces. I have successfully
+            developed projects like IUT_edumate and Teach ME, demonstrating my
+            ability to deliver high-quality solutions tailored to specific
+            requirements.
           </p>
           <button>Go</button>
         </motion.div>
@@ -75,10 +78,11 @@ const Services = () => {
         >
           <h2>ML Sevices</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            I have worked on different machine learning projects, where I have
+            used NLP and visual recognition. I have experience in building
+            machine learning models using Python and TensorFlow. I have also
+            worked on projects like sentiment analysis, image classification,
+            and object detection.
           </p>
           <button>Go</button>
         </motion.div>
@@ -88,10 +92,12 @@ const Services = () => {
         >
           <h2>Backend Development</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            In my journey as a backend developer, I've gained valuable
+            experience in crafting robust and efficient server-side solutions
+            for various projects. During my internship at Vivasoft, I had the
+            opportunity to work on backend development tasks, where I worked
+            with GO, NodeJS. Also I have experience in backend load and
+            performance testing.
           </p>
           <button>Go</button>
         </motion.div>
@@ -101,10 +107,10 @@ const Services = () => {
         >
           <h2>Devops</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            I have experience in deploying and managing applications using GKE .
+            I have worked on projects where I have deployed applications on
+            Kubernetes and managed them using Helm. I have also worked on CI/CD
+            pipelines using Jenkins and GitHub Actions.
           </p>
           <button>Go</button>
         </motion.div>

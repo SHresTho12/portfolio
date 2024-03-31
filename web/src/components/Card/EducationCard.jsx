@@ -67,12 +67,12 @@ const EducationCard = () => {
           {educationalInfo.map((info, index) => (
             <div key={index} className="education-info">
               <p>
-                <strong>{info.institution}</strong>
+                <strong>{info.degree}</strong>
               </p>
               <p>
                 {info.location}, {info.date}
               </p>
-              <p>{info.degree}</p>
+              <p>{info.institution}</p>
               <p>{info.result}</p>
             </div>
           ))}

@@ -1,10 +1,12 @@
 @import "../../app.scss";
 
 .personal-container{
-  //make the h1 centered
+  
   background: linear-gradient(180deg, #0c0c1d, #111132);
   h1{
     text-align: center;
+  color: rebeccapurple;
+    margin-top: 10px;
   }
 
 
@@ -17,19 +19,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  text-wrap: wrap;
   .card-container {
     display: flex;
     flex-direction: column; // Change to column layout
     align-items: center; // Center align items in column layout
     gap: 20px; // Adjust the gap between columns as needed
-
+    width: auto;
     .left-column {
-      width: 100%; // Ensure the left column takes full width
+      width: 50%; // Ensure the left column takes full width
     }
 
     .right-column {
-      width: 100%; // Ensure the right column takes full width
+      width: 50%; // Ensure the right column takes full width
     }
   }
 
